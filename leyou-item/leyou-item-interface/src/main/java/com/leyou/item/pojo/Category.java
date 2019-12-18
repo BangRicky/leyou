@@ -1,14 +1,13 @@
 package com.leyou.item.pojo;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author: jinbang
  * @create: 2019/8/9 10:27
  */
+
+@Entity
 @Table(name="tb_category")
 public class Category {
     @Id
@@ -45,11 +44,11 @@ public class Category {
         this.parentId = parentId;
     }
 
-    public Boolean getParent() {
+    public Boolean getISParent() {
         return isParent;
     }
 
-    public void setParent(Boolean parent) {
+    public void setIsParent(Boolean parent) {
         isParent = parent;
     }
 
